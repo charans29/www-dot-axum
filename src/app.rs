@@ -20,8 +20,8 @@ pub fn App() -> impl IntoView {
             }
             .into_view()
         }>
-            <main class="bg-black h-screen w-screen">
-                <div class="flex justify-center">
+            <main class="bg-black h-screen w-screen overflow-y-scroll">
+                <div class="flex justify-center z-10 inset-1 absolute h-[50px] items-center">
                     <nav class="border w-1/6 border-yellow-600 rounded-2xl opacity-0.1 flex justify-center space-x-5 mt-5 py-1 bg-slate-800">
                         <a href="/" class="font-mono text-red-700">"Home"</a>
                         <a href="/about" class="font-mono text-red-700">"About"</a>
