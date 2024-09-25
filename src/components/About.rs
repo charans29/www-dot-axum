@@ -1,4 +1,5 @@
 use leptos::{component, view, IntoView};
+use crate::components::docs::DocsPage;
 
 #[component]
 pub fn AboutPage() -> impl IntoView {
@@ -7,5 +8,8 @@ pub fn AboutPage() -> impl IntoView {
             <h1>"About ME"</h1>
             <p>"This is the about page."</p>
         </div>
+        <section id="about" class="h-screen">
+            <DocsPage/>
+        </section>
     }
 }
