@@ -20,7 +20,7 @@ pub fn App() -> impl IntoView {
             }
             .into_view()
         }>
-            <main class="bg-black h-screen w-screen overflow-y-scroll"
+            <main class="h-screen w-screen overflow-y-scroll"
                 style="background-image: linear-gradient(180deg, rgba(5,0,5,0.65) 30%, rgba(15,1,4,1) 70%);"
             >
                 <div class="flex justify-center z-10 inset-1 absolute h-[50px] items-center">

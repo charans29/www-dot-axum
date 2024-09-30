@@ -4,7 +4,11 @@ module.exports = {
       files: ["*.html", "./src/**/*.rs"],
     },
     theme: {
-      extend: {},
+      extend: {
+        backgroundImage: {
+          'gradient-to-r-red-blue': 'linear-gradient(to right, red, blue)',
+        },
+      },
     },
     plugins: [],
   }
