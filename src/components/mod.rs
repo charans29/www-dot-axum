@@ -1,3 +1,2 @@
 pub mod home;
-pub mod about;
-pub mod docs;
+pub mod resume;
