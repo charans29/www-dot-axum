@@ -5,11 +5,17 @@ use crate::components::resume::ResumePage;
 pub fn HomePage() -> impl IntoView {
 
     view! {
-        <div class="text-red-800 text-center h-screen font-thin w-screen flex justify-between">
-            <h1 class="h-full w-full bg-slate-400">"Welcome to Leptos!"</h1>
-            <h1 class="h-full w-full bg-slate-500">"Welcome to Leptos!"</h1>
+        <div class="flex flex-col justify-between h-screen font-thin w-screen py-10">
+            <div class="text-white/90 flex justify-between px-10">
+                <h1>"Welcome to Leptos!"</h1>
+                <h1>"Welcome to Leptos!"</h1>
+            </div>
+            <div class="text-white/90 flex justify-between px-10">
+                <h1>"Welcome to Leptos!"</h1>
+                <h1>"Welcome to Leptos!"</h1>
+            </div>
         </div>
-        <section id="about" class="h-screen">
+        <section id="resume" class="h-screen w-screen">
             <ResumePage/>
         </section>
     }
