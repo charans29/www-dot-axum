@@ -18,11 +18,12 @@ pub fn App() -> impl IntoView {
             view! {
                 <ErrorTemplate outside_errors/>
             }
+            .into_view()
         }>
             <main class="h-screen w-screen overflow-y-scroll css-selector">
                 <Routes>
-                <Route path="/" view=|cx| <HomePage cx={cx} /> />
-                    <Route path="/resume" view=|cx| <ResumePage cx/> /> 
+                    <Route path="/" view= || HomePage/>
+                    <Route path="/resume" view=ResumePage/> 
                 </Routes>      
             </main>
         </Router>
