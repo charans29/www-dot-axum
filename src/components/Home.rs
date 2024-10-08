@@ -1,9 +1,11 @@
 use leptos::*;
+use leptos::logging::log;
+use std::thread::Scope;
 use crate::components::resume::ResumePage;
+use web_sys::HtmlDetailsElement;
 
 #[component]
-pub fn HomePage() -> impl IntoView {
-
+pub fn HomePage<'a>(cx: Scope<'a, 'a>) -> impl IntoView {
     view! {
         <div class="flex flex-col justify-between h-screen font-thin w-screen py-5">
             <div class="text-white/90 flex flex-col lg:flex-row justify-between px-5 lg:px-10 items-center">
@@ -28,10 +30,53 @@ pub fn HomePage() -> impl IntoView {
                 </div>
                 <h1 class="mt-5 lg:mt-0">"Welcome to Leptos!"</h1>
             </div>
+
+            <DetailsTest cx/>
         </div>
 
         <section id="resume" class="h-screen w-screen">
             <ResumePage/>
         </section>
+    }
+}
+
+#[component]
+fn DetailsTest<'a>(cx: Scope<'a, 'a>) -> impl IntoView {
+    let (open, set_open) = create_signal(false);
+
+    let toggle_menu = move |_| {
+        set_open(!open.get());
+    };
+    
+    view! {
+        <details open=open on:toggle=move|e| {
+            log!("on toggle!");
+            set_open(event_target::<HtmlDetailsElement>(&e).open());
+        }>
+            <summary>
+                <button on:click=toggle_menu>
+                    <svg width="23" height="18" viewBox="0 0 23 18">
+                        <path fill="transparent"
+                            stroke-width="3"
+                            stroke="white"
+                            stroke-linecap="round"
+                            d={if open.get() { "M 3 16.5 L 17 2.5" } else { "M 2 2.5 L 20 2.5" }}
+                            class="top" />
+                        <path fill="transparent"
+                            stroke-width="3"
+                            stroke="white"
+                            stroke-linecap="round"
+                            d="M 6 9.423 L 20 9.423"
+                            class="middle" />
+                        <path fill="transparent"
+                            stroke-width="3"
+                            stroke="white"
+                            stroke-linecap="round"
+                            d={if open.get() { "M 3 2.5 L 17 16.346" } else { "M 2 16.346 L 20 16.346" }}
+                            class="bottom" />
+                    </svg>
+                </button>
+            </summary>
+        </details>
     }
 }
