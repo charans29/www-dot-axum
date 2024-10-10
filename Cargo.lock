@@ -742,6 +742,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e0242819d153cba4b4b05a5a8f2a7e9bbf97b6055b2a002b395c96b5ff3c0222"
 dependencies = [
  "cfg-if",
+ "js-sys",
+ "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]
@@ -804,6 +807,16 @@ dependencies = [
  "typed-builder-macro",
  "wasm-bindgen",
  "web-sys",
+]
+
+[[package]]
+name = "leptos_animation"
+version = "0.5.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "63404a7c8d394f540e942768f2cf3afa4603905765c7a4778c774e0e6fb813dd"
+dependencies = [
+ "instant",
+ "leptos",
 ]
 
 [[package]]
@@ -2264,6 +2277,7 @@ dependencies = [
  "console_error_panic_hook",
  "http",
  "leptos",
+ "leptos_animation",
  "leptos_axum",
  "leptos_meta",
  "leptos_router",
