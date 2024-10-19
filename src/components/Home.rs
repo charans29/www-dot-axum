@@ -12,11 +12,11 @@ pub fn HomePage() -> impl IntoView {
         <div class="flex flex-col justify-between h-screen font-thin w-screen py-5"
         style="
                 background-image: linear-gradient(
-                    rgba(30, 30, 32, 0.8), 
-                    rgba(14, 14, 17, 0.8)
-                ), url(hero.jpeg);
+                    rgba(30, 30, 32, 0.6), 
+                    rgba(14, 14, 97, 0.5)
+                ), url(me.png);
                 background-repeat: no-repeat;
-                background-position: center 100%;
+                background-position: center 20%;
                 background-size: cover;
             "
         >
