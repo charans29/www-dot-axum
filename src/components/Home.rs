@@ -14,7 +14,7 @@ pub fn HomePage() -> impl IntoView {
                 background-image: linear-gradient(
                     rgba(30, 30, 32, 0.6), 
                     rgba(14, 14, 97, 0.5)
-                ), url(me.png);
+                );
                 background-repeat: no-repeat;
                 background-position: center 20%;
                 background-size: cover;
