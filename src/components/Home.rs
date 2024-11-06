@@ -9,17 +9,7 @@ pub fn HomePage() -> impl IntoView {
         set_open.set(!open.get());
     };
     view! {
-        <div class="flex flex-col justify-between h-screen font-thin w-screen py-5"
-        style="
-                background-image: linear-gradient(
-                    rgba(30, 30, 32, 0.6), 
-                    rgba(14, 14, 97, 0.5)
-                );
-                background-repeat: no-repeat;
-                background-position: center 20%;
-                background-size: cover;
-            "
-        >
+        <div class="flex flex-col justify-between h-screen font-thin w-screen py-5">
             <div class="text-white/90 flex flex-col lg:flex-row justify-between px-5 lg:px-10 items-center">
                 <h1 class="bg-red-700 text-black p-3 rounded-sm mb-5 lg:mb-0">"Welcome to Leptos!"</h1>
                 <div class="flex flex-row justify-between space-x-2 lg:space-x-4 w-full lg:w-1/4">
@@ -53,6 +43,15 @@ pub fn HomePage() -> impl IntoView {
                     </button>
                 </div>
             </div>
+
+
+            <div class="relative h-80 w-64 border rounded-[5px] overflow-hidden">
+
+                <div class="absolute inset-0 gradient-overlay"></div>
+
+                <img class="zoom-effect w-full h-full object-cover" src="me.png" alt="Background Image"/>
+            </div>
+
             <div class="text-white/90 flex flex-col lg:flex-row justify-between px-5 lg:px-10 items-end">
                 <h1 class="mb-5 lg:mb-0">"Welcome to Leptos!"</h1>
                 <div class="flex flex-col justify-between">
