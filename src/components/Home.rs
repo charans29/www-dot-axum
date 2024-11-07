@@ -45,11 +45,11 @@ pub fn HomePage() -> impl IntoView {
             </div>
 
 
-            <div class="relative h-80 w-64 border rounded-[5px] overflow-hidden">
-
-                <div class="absolute inset-0 gradient-overlay"></div>
-
-                <img class="zoom-effect w-full h-full object-cover" src="me.png" alt="Background Image"/>
+            <div class="w-full flex flex-row-reverse p-10"> 
+                <div class="h-80 w-64 border-none rounded-[5px] overflow-hidden relative image-container"> 
+                    <img class="zoom-effect object-cover" src="me.png" alt="Background Image"/>
+                    <div class="gradient-overlay absolute inset-0 pointer-events-none"></div>
+                </div> 
             </div>
 
             <div class="text-white/90 flex flex-col lg:flex-row justify-between px-5 lg:px-10 items-end">

@@ -7,28 +7,17 @@ body {
     background: #000000;
 }
 
-/* Zoom Effect */
 .zoom-effect {
-    transition: transform 0.4s ease; /* Smooth zoom effect */
-    width: 100%; /* Ensure the image fills the div */
-    height: 100%; /* Ensure the image fills the div */
-    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
-    z-index: 1; /* Ensure image stays above the gradient */
+    transition: transform 0.4s ease;    
 }
 
 .zoom-effect:hover {
-    transform: scale(1.1); /* Zoom in effect on hover */
+    transform: scale(1.1);
 }
 
-/* Gradient Overlay */
 .gradient-overlay {
     background-image: linear-gradient(
-        rgba(14, 251, 180, 0.7),
+        rgba(65, 247, 193, 0.769),
         rgba(13, 251, 203, 0.6)
     );
-    position: absolute; /* Positioned behind the image */
-    inset: 0; /* Ensures the gradient covers the entire container */
-    z-index: 0; /* Keeps the gradient behind the image */
-    border-radius: 5px; /* Add rounded corners */
-    overflow: hidden; /* Keeps everything inside the container */
 }
