@@ -12,12 +12,19 @@ body {
 }
 
 .zoom-effect:hover {
-    transform: scale(1.1);
+    transform: scaleX(1.9) scaleY(1.4);
+
+}
+
+.img-effect{
+    cursor: pointer;
+    filter: brightness(0.9) contrast(10.5) hue-rotate(100deg) saturate(1.3);
 }
 
 .gradient-overlay {
     background-image: linear-gradient(
-        rgba(65, 247, 193, 0.769),
+        rgba(65, 247, 193, 0.7),
         rgba(13, 251, 203, 0.6)
     );
+    
 }

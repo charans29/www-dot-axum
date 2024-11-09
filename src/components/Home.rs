@@ -46,8 +46,8 @@ pub fn HomePage() -> impl IntoView {
 
 
             <div class="w-full flex flex-row-reverse p-10"> 
-                <div class="h-80 w-64 border-none rounded-[5px] overflow-hidden relative image-container"> 
-                    <img class="zoom-effect object-cover" src="me.png" alt="Background Image"/>
+                <div class="h-80 w-64 border-none rounded-[5px] overflow-hidden relative"> 
+                    <img class="zoom-effect scale-x-[1.8] scale-y-[1.3] img-effect" style="width: 150%; height: 150%;" src="me.png" alt="Background Image"/>
                     <div class="gradient-overlay absolute inset-0 pointer-events-none"></div>
                 </div> 
             </div>
